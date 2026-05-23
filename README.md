@@ -1,0 +1,73 @@
+# Sistema de Estacionamento
+
+Projeto desenvolvido em Java para controlar a entrada e saída de veículos em um estacionamento.
+
+## Objetivo
+
+O sistema permite cadastrar veículos, registrar entrada, registrar saída, calcular o valor a pagar, listar veículos estacionados no momento e consultar o histórico de movimentações.
+
+## Tecnologias utilizadas
+
+- Java
+- SQLite
+- JDBC
+- Visual Studio Code
+
+## Funcionalidades
+
+- Cadastro de veículos
+- Controle de entrada
+- Controle de saída
+- Cálculo automático do valor
+- Listagem de veículos estacionados
+- Histórico de movimentações
+- Controle de vagas
+- Validação de placa duplicada
+- Validação de vaga ocupada
+- Validação de saída de veículo não estacionado
+
+## Regras de cobrança
+
+- Até 1 hora: R$ 5,00
+- Cada hora adicional: R$ 3,00
+- Moto paga 50% do valor
+- Caminhonete paga 150% do valor
+- Carro paga o valor normal
+
+## Estrutura do projeto
+
+```text
+SISTEMA-DE-ESTACIONAMENTO/
+├── bin/
+├── database/
+│   └── estacionamento.db
+├── lib/
+│   └── sqlite-jdbc.jar
+└── src/
+    ├── app/
+    │   └── Main.java
+    ├── dao/
+    │   ├── Conexao.java
+    │   ├── CriarTabelas.java
+    │   ├── VeiculoDAO.java
+    │   ├── VagaDAO.java
+    │   └── MovimentacaoDAO.java
+    ├── model/
+    │   ├── Veiculo.java
+    │   ├── Carro.java
+    │   ├── Moto.java
+    │   ├── Caminhonete.java
+    │   ├── Vaga.java
+    │   └── Movimentacao.java
+    └── service/
+        └── Estacionamento.java
+
+## Como executar
+
+Compile o projeto com o comando:
+
+javac -cp "lib/sqlite-jdbc.jar" -d bin src/app/Main.java src/model/*.java src/dao/*.java src/service/*.java
+
+Execute o sistema com:
+
+java -cp "lib/sqlite-jdbc.jar;bin" app.Main
