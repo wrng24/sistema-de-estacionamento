@@ -1,0 +1,9 @@
+## Como executar
+
+Compile o projeto com o comando:
+
+javac -cp "lib/sqlite-jdbc.jar" -d bin src/app/Main.java src/model/*.java src/dao/*.java src/service/*.java
+
+Execute o sistema com:
+
+java -cp "lib/sqlite-jdbc.jar;bin" app.Main
