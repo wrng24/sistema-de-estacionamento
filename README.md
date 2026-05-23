@@ -2,6 +2,14 @@
 
 Projeto desenvolvido em Java para controlar a entrada e saída de veículos em um estacionamento.
 
+## Como executar
+
+Compile o projeto com o comando:
+javac -cp "lib/sqlite-jdbc.jar" -d bin src/app/Main.java src/model/*.java src/dao/*.java src/service/*.java
+
+Execute o sistema com:
+java -cp "lib/sqlite-jdbc.jar;bin" app.Main
+
 ## Objetivo
 
 O sistema permite cadastrar veículos, registrar entrada, registrar saída, calcular o valor a pagar, listar veículos estacionados no momento e consultar o histórico de movimentações.
@@ -62,12 +70,5 @@ SISTEMA-DE-ESTACIONAMENTO/
     └── service/
         └── Estacionamento.java
 
-## Como executar
 
-Compile o projeto com o comando:
 
-javac -cp "lib/sqlite-jdbc.jar" -d bin src/app/Main.java src/model/*.java src/dao/*.java src/service/*.java
-
-Execute o sistema com:
-
-java -cp "lib/sqlite-jdbc.jar;bin" app.Main
